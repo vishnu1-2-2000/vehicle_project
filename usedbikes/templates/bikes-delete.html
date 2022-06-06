@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%block body_block%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="col">
+  <form action="" method="post">
+    are you sure want to delete
+    {%csrf_token%}
+    <input type="submit">
+  </form>
+</div>
+</body>
+</html>
+{%endblock%}
