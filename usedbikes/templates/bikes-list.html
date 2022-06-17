@@ -6,7 +6,7 @@
         <table class="table">
             <tr>
                 <th>Bikes Name</th>
-                <th>company Name</th>
+                <th>seller</th>
                 <th>location</th>
                 <th>Model</th>
                 <th>Killometer run</th>
@@ -16,7 +16,7 @@
             {%for bike in bikes%}
             <tr>
                 <td>{{bike.bike_name}}</td>
-                <td>{{bike.company_name}}</td>
+                <td>{{bike.company.usedbikes.seller}}</td>
                 <td>{{bike.location}}</td>
                 <td>{{bike.model}}</td>
                 <td>{{bike.killometer_run}}</td>

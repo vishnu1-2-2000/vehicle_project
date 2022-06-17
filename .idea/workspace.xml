@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dafc7628-ff5e-444a-bb60-2515e760db3c" name="Default Changelist" comment="" />
+    <list default="true" id="dafc7628-ff5e-444a-bb60-2515e760db3c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/migrations/0002_bikeprofile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/templates/bike-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/bike-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/templates/bikes-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/bikes-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/templates/usersignup.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/usersignup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicleproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vehicleproject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicleproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/vehicleproject/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +35,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -32,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/usedbikes/templates/base.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="29hmDEz4W1xhbXlf5Ox7AhjnJqo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,6 +76,18 @@
       <updated>1653573570594</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

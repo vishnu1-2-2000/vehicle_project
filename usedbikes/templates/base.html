@@ -42,10 +42,10 @@
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{%url 'password-change'%}">change password</a>
                                         {%if request.user.usedbikes%}
-                                        <a class="dropdown-item" href="{%url 'bikes-profile'%}">view vehicle</a>
+                                        <a class="dropdown-item" href="{%url 'bikes-profile'%}">view profile</a>
                                         {%else%}
 
-                                        <a class="dropdown-item" href="{%url 'bikes-addprofile'%}">Add vehicle</a>
+                                        <a class="dropdown-item" href="{%url 'bikes-addprofile'%}">Add profile</a>
                                         {%endif%}
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="{%url 'signout'%}">logout</a>

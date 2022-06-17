@@ -3,7 +3,8 @@ from django.views.generic import View,ListView,CreateView,DetailView,UpdateView,
 from usedbikes.forms import Bikesform,Signupform,Loginform,Passwordresetform,Bikeprofileform
 from usedbikes.models import Bikes,Bikeprofile
 from django.urls import reverse_lazy
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
+from usedbikes.models import User
 from django.contrib.auth import authenticate,login,logout
 
 
@@ -31,6 +32,9 @@ class Addvehicleview(CreateView):
     #         return render(request,"home.html")
     #     else:
     #         return render(request,"bikes-add.html",{"form":form})
+    def form_valid(self, form):
+        form.instance.company=self.request.user
+        return super().form_valid(form)
 
 
 
@@ -38,6 +42,8 @@ class Listvehicleview(ListView):
     model=Bikes
     context_object_name = "bikes"
     template_name = "bikes-list.html"
+    def get_queryset(self):
+        return Bikes.objects.filter(company=self.request.user)
 
 
 class Detailview(View):
@@ -71,7 +77,7 @@ class Signupview(CreateView) :
     model = User
     form_class = Signupform
     template_name = "usersignup.html"
-    success_url = reverse_lazy("bikes-list")
+    success_url = reverse_lazy("signin")
 
 
 
@@ -86,7 +92,10 @@ class Signinview(FormView):
             user=authenticate(request,username=uname,password=pwd)
             if user:
                 login(request,user)
-                return redirect("bikes-list")
+                if request.user.role=="seller":
+                    return redirect("bikes-list")
+                elif request.user.role=="buyer":
+                    return  redirect("buyer-home")
             else:
                 return render(request,"login.html",{"form":form})
 

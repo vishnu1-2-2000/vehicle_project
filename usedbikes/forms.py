@@ -1,18 +1,19 @@
 from django import forms
 from usedbikes.models import Bikes,Bikeprofile
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
+from usedbikes.models import User
 from django.contrib.auth.forms import UserCreationForm
 
 class Bikesform(forms.ModelForm):
     class Meta:
         model=Bikes
-        fields="__all__"
-        
+        exclude=("created_date","active_status","company")
+
 
 class Signupform(UserCreationForm) :
     class Meta:
         model=User
-        fields=["first_name","last_name","username","email","password1","password2"]
+        fields=["first_name","last_name","username","email","password1","password2","role","phone","location"]
 
 
 class Loginform(forms.Form):
