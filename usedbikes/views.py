@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.views.generic import View,ListView,CreateView,DetailView,UpdateView,DeleteView,FormView,TemplateView
 from usedbikes.forms import Bikesform,Signupform,Loginform,Passwordresetform,Bikeprofileform
-from usedbikes.models import Bikes,Bikeprofile
+from usedbikes.models import Bikes,Bikeprofile,BikeApplication
 from django.urls import reverse_lazy
 # from django.contrib.auth.models import User
 from usedbikes.models import User
@@ -160,10 +160,26 @@ class BikeprofileEditView(UpdateView):
     pk_url_kwarg = "id"
 
 
+class VehiclelistApplications(ListView):
+    model=BikeApplication
+    context_object_name = "application"
+    template_name = "veh-applicationlist.html"
+    def get_queryset(self):
+        return BikeApplication.objects.filter(vehicle=self.kwargs.get("id")).exclude(status="cancelled")
 
 
+class VehicleApplicationDetailView(DetailView):
+    model = BikeApplication
+    context_object_name = "application"
+    template_name = "veh-applicDetail.html"
+    pk_url_kwarg = "id"
 
-
+def reject_application(request,*args,**kwargs):
+    app_id=kwargs.get("id")
+    application=BikeApplication.objects.get(id=app_id)
+    application.status="reject"
+    application.save()
+    return redirect("bike-home")
 
 
 

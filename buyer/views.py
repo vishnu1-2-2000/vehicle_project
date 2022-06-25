@@ -1,8 +1,9 @@
 from django.shortcuts import render,redirect
-from django.views.generic import TemplateView,CreateView,FormView
+from django.views.generic import TemplateView,CreateView,FormView,ListView,DetailView
 from django.urls import reverse_lazy
-from usedbikes .models import User
+from usedbikes .models import User,Bikes,BikeApplication
 from django.contrib.auth import authenticate,login,logout
+from django.contrib import messages
 
 
 
@@ -87,9 +88,59 @@ class BuyerprofileEditview(FormView) :
             return render(request.template_name,{"form":form})
 
 
+class Buyervehiclelistview(ListView):
+    model = Bikes
+    context_object_name = "bike"
+    template_name = "customers/bikelist.html"
+    def get_queryset(self):
+        return self.model.objects.all().order_by("-created_date")
 
 
+class BuyervehicleDetailview(DetailView):
+    model = Bikes
+    context_object_name = "bike"
+    template_name = "customers/bikedetail.html"
+    pk_url_kwarg = "id"
+    def get_context_data(self, **kwargs):
 
+        context=super().get_context_data(**kwargs)
+        # is_applied=BikeApplication.objects.filter(Buyer=self.request.user,vehicle=self.object)
+        # print(is_applied)
+        # context["is_applied"]=is_applied
+        # return context
+        try:
+            application=BikeApplication.objects.filter(Buyer=self.request.user,vehicle=self.object)
+        # print(is_applied)
+            context["application"]=application[0]
+            return context
+        except:
+            return context
+        #
+
+def buy_now(request,*args,**kwargs):
+    user=request.user
+    bike_id=kwargs.get("id")
+    bike=Bikes.objects.get(id=bike_id)
+    BikeApplication.objects.create(Buyer=user,vehicle=bike)
+    messages.success(request,"your request is successfully submited")
+    return redirect("buyer-home")
+
+
+class BuyervehicleApplicationListview(ListView):
+    model = BikeApplication
+    template_name = "customers/buyer-application.html"
+    context_object_name = "application"
+    def get_queryset(self):
+        return BikeApplication.objects.filter(Buyer=self.request.user).exclude(status="cancelled")
+
+
+def cancell_vehicle(request,*args,**kwargs):
+    veh_id=kwargs.get("id")
+    bike=BikeApplication.objects.get(id=veh_id)
+    bike.status="cancelled"
+    bike.save()
+    messages.success(request,"your vehicle is cancelled")
+    return redirect("buyer-home")
 
 
 

@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+
+{%block body_block%}
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-8">
+    <div class="card" style="width: 18rem;">
+  <img src="{{application.Buyer.buyer.profile_photo.url}}" class="card-img-top" alt="no logo found">
+  <div class="card-body">
+    <h5 class="card-title">{{request.user.first_name}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Qualification:{{application.Buyer.buyer.location}}</li>
+    <li class="list-group-item">Skill:{{application.Buyer.buyer.phone}}</li>
+    <li class="list-group-item">Location:{{application.Buyer.buyer.email}}</li>
+
+
+
+
+
+
+
+  </ul>
+  <div class="card-body">
+    <a href="" class="btn btn-outline-success">ACCEPT</a>
+    <a href="{%url 'rej-appl' application.id%}" class="btn btn-outline-danger">REJECT</a>
+  </div>
+</div>
+
+  </div>
+  <div class="col-3"></div>
+</div>
+{%endblock%}

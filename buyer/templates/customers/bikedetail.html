@@ -1,0 +1,53 @@
+{%extends "customers/base.html"%}
+{%load static %}
+{%block body_block%}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-4 -">
+            <div class="card" style="width: 18rem;">
+                <img src="{{bike.bike_photo.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Bike name:{{bike.bike_name}}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <li class="list-group-item">Company:{{bike.company}}</li>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Location:{{bikes.location}}</li>
+
+                    <li class="list-group-item">Killometer Run:{{bike.killometer_run}}</li>
+                    <li class="list-group-item">Price:{{bike.price}}</li>
+                    <li class="list-group-item"> {{bike.created_date}}</li>
+                    <li class="list-group-item">Description:{{bike.description}}</li>
+
+
+                </ul>
+                <div>
+                                <h1>{{application.status}}</h1>
+            <div>
+                {%if application%}
+                {%if application.status == 'applied'%}
+
+                      <a href="" class="btn btn-outline-success">APPLIED</a>
+                {%elif application.status == 'cancelled'%}
+                <a href="{%url 'buynow' bike.id%}" class="btn btn-outline-primary">Buy now</a>
+
+                {%endif%}
+
+                {%else%}
+                      <a href="{%url 'buynow' bike.id%}" class="btn btn-outline-primary">Buy now</a>
+
+                {%endif%}
+
+
+
+
+
+
+
+            </div>
+        </div>
+        {%endblock%}

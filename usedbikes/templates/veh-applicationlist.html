@@ -1,0 +1,48 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="row">
+    <div class="col->4"></div>
+    <div class="col-8">
+
+        <table class="table">
+
+            <tr>
+                <th>Buyer Name</th>
+                <th>Location</th>
+
+                <th>Contact Number</th>
+                <th>Email</th>
+                <th>Applied  Date</th>
+
+
+
+
+
+
+
+            </tr>
+            {%for application in application%}
+            <tr>
+                <td>{{application.Buyer.buyer.buyer}}</td>
+                <td>{{application.Buyer.buyer.location}}</td>
+                <td>{{application.Buyer.buyer.phone}}</td>
+                <td>{{application.Buyer.email}}</td>
+
+
+
+
+                <td>{{application.date}}</td>
+                <td> <a href="{%url 'veh-detail' application.id%}" class="btn btn-outline-success">View Application</a>
+</td>
+
+
+
+
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+    <div class="col-4">
+    </div>
+</div>
+{%endblock%}

@@ -3,19 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="dafc7628-ff5e-444a-bb60-2515e760db3c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usedbikes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usedbikes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usedbikes/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usedbikes/migrations/0002_bikeprofile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyer/templates/customers/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/buyer/templates/customers/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyer/templates/customers/buyer-home.html" beforeDir="false" afterPath="$PROJECT_DIR$/buyer/templates/customers/buyer-home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/buyer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/buyer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usedbikes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usedbikes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usedbikes/templates/bike-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/bike-profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usedbikes/templates/bikes-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/bikes-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/templates/bikes-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/bikes-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/templates/bikes-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/bikes-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usedbikes/templates/usersignup.html" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/templates/usersignup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usedbikes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usedbikes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/usedbikes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicleproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vehicleproject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicleproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/vehicleproject/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

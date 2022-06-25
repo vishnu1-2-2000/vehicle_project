@@ -1,0 +1,40 @@
+{%extends "customers/base.html"%}
+{%load static %}
+{%block body_block%}
+
+<div class="container">
+    <div class="row">
+        {%for bike in bike%}
+
+        <div class="col-4 -">
+            <div class="card" style="width: 18rem;">
+                <img src="{{bike.bike_photo.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Bike name:{{application.bike_name}}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <li class="list-group-item">Company:{{bike.company}}</li>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Location:{{applications.location}}</li>
+
+                    <li class="list-group-item">Killometer Run:{{bike.killometer_run}}</li>
+                    <li class="list-group-item">Price:{{bike.price}}</li>
+                    <li class="list-group-item"> {{bike.created_date}}</li>
+                    <li class="list-group-item">Description:{{bike.description}}</li>
+
+
+                </ul>
+
+                <div class="card-body">
+
+                    <a href="{%url 'bike-info' bike.id%}" class="btn btn-outline-primary">VIEW MORE</a>
+
+                </div>
+                {%endfor%}
+
+
+            </div>
+        </div>
+        {%endblock%}

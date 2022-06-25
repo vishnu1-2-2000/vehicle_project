@@ -34,6 +34,9 @@ class Bikes(models.Model):
     price=models.PositiveIntegerField(default=0)
     created_date=models.DateField(auto_now_add=True)
     active_status=models.BooleanField(default=True)
+    bike_photo=models.ImageField(upload_to="bike_photo",null=True)
+    description=models.CharField(max_length=150)
+
 
 
 
@@ -51,4 +54,16 @@ class Bikeprofile(models.Model):
     phone_number=models.PositiveIntegerField(default=0)
     profile_photo=models.ImageField(upload_to="bikeprofile",null=True)
 
-    
+
+class BikeApplication(models.Model):
+    Buyer=models.ForeignKey(User,on_delete=models.CASCADE,related_name="Buyer")
+    vehicle=models.ForeignKey(Bikes,on_delete=models.CASCADE)
+    options=(
+        ("applied","applied"),
+        ("viewed","viewed"),
+        ("reject","reject"),
+        ("cancelled","cancelled")
+
+    )
+    status=models.CharField(max_length=120,choices=options,default="sending")
+    date=models.DateField(auto_now_add=True)

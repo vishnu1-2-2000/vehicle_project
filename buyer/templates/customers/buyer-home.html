@@ -10,6 +10,27 @@
 <body>
 <h1>WELCOME HOME</h1>
 {{request.user}}
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+
+        {%if messages%}
+
+        {% for message in messages %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+        {{message}}
+
+
+        {%endif%}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                {{message]}
+
+        {%endif%}
+        {%endfor%}
+        {%endif%}
+
+
 </body>
 </html>
 {%endblock%}

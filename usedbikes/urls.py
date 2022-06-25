@@ -15,7 +15,10 @@ path("users/password/change",views.Changepasswordview.as_view(),name="password-c
 path("users/password/reset",views.Passwordresetview.as_view(),name="password-reset"),
 path("profile/add",views.Bikeprofileview.as_view(),name="bikes-addprofile"),
 path("profile/detail",views.Bikeviewprofileview.as_view(),name="bikes-profile"),
-path("profile/edit/<int:id>",views.BikeprofileEditView.as_view(),name="bike-editprofile")
+path("profile/edit/<int:id>",views.BikeprofileEditView.as_view(),name="bike-editprofile"),
+path("application/all/<int:id>",views.VehiclelistApplications.as_view(),name="veh-applist"),
+path("application/details/all/<int:id>",views.VehicleApplicationDetailView.as_view(),name="veh-detail"),
+path("bike/application/status/change/<int:id>",views.reject_application,name="rej-appl")
 
 
 ]
